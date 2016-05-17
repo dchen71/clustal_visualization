@@ -42,6 +42,14 @@ d3.csv('Input/parsed_con.csv')
     //Find max x value
     var max = d3.max(subset, function(d){return +d.POS})
 
+    //Init the start and end inputs
+    d3.selectAll('#start').attr("max", max)
+                          .attr("value", 1)
+    d3.selectAll('#end').attr("max", max)
+                        .attr("value", max)
+
+
+
     //Draws the plot
     function draw_plot(start, end){
       /*
@@ -168,7 +176,7 @@ d3.csv('Input/parsed_con.csv')
         clearGraph();
 
         //Ensure that it's a positive number/less than max
-        if(this.value >= 0 && this.value <= 1376){
+        if(this.value >= 0 && this.value <= max){
           start = this.value;
           draw_plot(start, end);
           set_min(this.value);
@@ -180,7 +188,7 @@ d3.csv('Input/parsed_con.csv')
         clearGraph();
 
         //Ensure that it's a positive number/less than max
-        if(this.value >= 0 && this.value <= 1376){
+        if(this.value >= 0 && this.value <= max){
           end = this.value;
           draw_plot(start, end);
           set_max(this.value);

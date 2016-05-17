@@ -8,9 +8,10 @@ Visualizes the results from ClustalW for protein alignment in a easy to understa
 In addition, each dot shows the bases and conservation when hovering over them. 
 
 The input data is structured like the following:  
-POS | CON | seq1 | seq2
---- | --- | --- | ---
-1 | 0 | N | N
+
+POS | CON | seq1 | seq2  
+--- | --- | --- | ---  
+1 | 0 | N | N  
 
 The things that need to be changed in the app.js is the input csv file, the tooltip depending on number of fasta files, and the variables used for those fasta files.
 

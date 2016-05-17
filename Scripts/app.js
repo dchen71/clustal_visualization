@@ -36,6 +36,12 @@ d3.csv('Input/parsed_con.csv')
       d.HUM = d.X2;
     });
 
+    //Subset data based on start/end
+    var subset = data.filter(function(d){return d.POS <= end && d.POS >= start})
+
+    //Find max x value
+    var max = d3.max(subset, function(d){return +d.POS})
+
     //Draws the plot
     function draw_plot(start, end){
       /*
@@ -43,7 +49,11 @@ d3.csv('Input/parsed_con.csv')
       */
 
       //Subset data based on start/end
-      var subset = data.filter(function(d){return d.POS <= end && d.POS >= start})
+      subset = data.filter(function(d){return d.POS <= end && d.POS >= start})
+
+      //Find max x value
+      max = d3.max(subset, function(d){return +d.POS})
+      console.log(max);
 
       //Setup x
       var xValue = function(d) { return d.POS ;}, // data -> value
@@ -147,7 +157,7 @@ d3.csv('Input/parsed_con.csv')
     }
 
     //Draw initial max plot on csv load
-    draw_plot(0, 1376);
+    draw_plot(0, max);
 
     /*
       Data binding for protein location range

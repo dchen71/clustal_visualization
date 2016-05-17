@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ClustalW Visualization</title>
+	<link rel="stylesheet" type="text/css" href="Styles/styles.css">
+	<meta charset="utf-8">
+	<meta name="description" content="Compare conservation of using results from ClutalW">
+</head>
+<body>
+	<header>
+		<h2>ClustalW Visualization</h2>
+	</header>
+
+	<form>
+		<label for="start">Input start</label>
+		<input type="number" name="start" id="start" min=0 max=1376 value=0 pattern="[0-9]" step=1 />
+		<label for="end">Input end</label>
+		<input type="number" name="end" id="end" min=0 max=1376 value=1376 pattern="[0-9]" step=1 />
+	</form>
+
+	<div class="chart-div">
+		
+	</div>
+
+
+	<!- Load javascripts ->
+	<script type="text/javascript" src="node_modules/d3/d3.min.js"></script>
+	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="Scripts/app.js"></script>
+</body>
+</html>

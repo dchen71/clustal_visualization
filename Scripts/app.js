@@ -154,8 +154,8 @@ d3.csv('Input/parsed_con.csv')
                    .duration(200)
                    .style("opacity", 1);
               tooltip.html("<p>" + "Pos: " + d.POS + "<br/>" +"Mus: " + d.MUS + "<br/>"  + "HUM: " + d.HUM + "</p")
-                   .style("left", (d3.event.pageX - 10) + "px")
-                   .style("top", (d3.event.pageY - 90) + "px");
+                   .style("left", (d3.event.pageX - 5) + "px")
+                   .style("top", (d3.event.pageY - 65) + "px");
           })
           .on("mouseout", function(d) {
               tooltip.transition()

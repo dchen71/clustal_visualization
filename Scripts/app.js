@@ -1,5 +1,5 @@
 /*
-  D3 Visualization Conservation of aligned reads of Igf1r
+  D3 Visualization Conservation of aligned reads of IRS1
 
   This uses a precompiled csv to display a dot plot showing conservation
 

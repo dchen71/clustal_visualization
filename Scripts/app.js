@@ -62,7 +62,6 @@ d3.csv('Input/parsed_con.csv')
 
       //Find max x value
       max = d3.max(subset, function(d){return +d.POS})
-      console.log(max);
 
       //Setup x
       var xValue = function(d) { return d.POS ;}, // data -> value
